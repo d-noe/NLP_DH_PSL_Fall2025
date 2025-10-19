@@ -22,7 +22,11 @@ This folder hosts the notebooks and code used in the different tutorials and han
   - Main libraries: `transformers`, `bertviz`, (`scikit-learn`, `pandas`)
 - [Hands-on_1.ipynb](./1_bert_training/Hans-on_1.ipynb): Reproduce and expand tutorial's content. Explore Semantic Shifts from LM's lense based on historical newspaper data from [Living With Machines](https://livingwithmachines.ac.uk) initiative.
 
-<details><summary>To go further</summary> <a name="code_supp_1"></a>
+<a name="code_supp_1"></a>
+<details><summary>To go further</summary> 
+
+- Implement the *attention mechanism* from the [*Attention is All You Need* (Vaswani et al., 2017)](https://arxiv.org/abs/1706.03762) cornerstone paper in a [Colab Notebook](https://colab.research.google.com/drive/1tm0_Usqkavr0h1Jk0f-ukcykI78xmcfW#scrollTo=tSWEk4ttUgQH) by Alexander "Sasha" Rush. Or read their detailed walkthrough article: [*The Annotated Transformer*](http://nlp.seas.harvard.edu/annotated-transformer/).
+
 </details>
 
 ## Week 2 — 05.11 <a name="code_week2"></a>
