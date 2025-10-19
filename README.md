@@ -7,6 +7,7 @@ This repository hosts material for 4x3hours lectures in the context of the *Intr
 3. [Week 3 (12/11)](#week3)
 4. [Week 4 (19/11)](#week4)
 
+The code and notebooks for the tutorials and hands-on sessions are provided in the [scripts](./code/) folder. The data used for these sessions is described and stored in [data](./data/).
 
 ## Week 1 (29/10): *Modeling Language: Towards Contextualized Representations* <a name="week1"></a>
 
@@ -16,6 +17,9 @@ This repository hosts material for 4x3hours lectures in the context of the *Intr
 - Main reference(s): 
 
 <details><summary>To go further</summary>
+
+**Want more hands-on?** Check the [*To go further* section in code folder](./code/README.md#code_supp_1).
+
 </details>
 
 ## Week 2 (05/11): *Discovering Structure: Semantic Spaces & Unsupervised Modelling* <a name="week2"></a>

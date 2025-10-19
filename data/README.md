@@ -5,9 +5,9 @@ This folder hosts the data used in the different tutorials and hands-on sessions
 - [Week 1](#data_week1)
   - Word Sense Disambiguation: [CoarseWSD-20](#wsd)
   - Semantic Shifts Analysis: [Living With Machines](#lwm)
-- [Week 1](#data_week1)
 - [Week 2](#data_week2)
 - [Week 3](#data_week3)
+- [Week 4](#data_week4)
 
 The [`preprocessing`](./preprocessing/) folder contains pre-processing scripts used to obtain the presented data files. It is included for transparency and to allow reproduction, but was not developed for pedagogical purposes (-> the code is likely quick and dirty).
 
