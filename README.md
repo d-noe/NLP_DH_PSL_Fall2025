@@ -18,6 +18,9 @@ The code and notebooks for the tutorials and hands-on sessions are provided in t
 
 <details><summary>To go further</summary>
 
+- [(Ghaseminejad Raeini, 2025)](https://www.sciencedirect.com/science/article/pii/S2949719125000445): *The evolution of language models: From N-Grams to LLMs, and beyond*.
+- [(Allen & Hospedales, 2019)](https://proceedings.mlr.press/v97/allen19a.html): *Analogies Explained: Towards Understanding Word Embeddings*
+
 **Want more hands-on?** Check the [*To go further* section in code folder](./code/README.md#code_supp_1).
 
 </details>
@@ -50,4 +53,7 @@ The code and notebooks for the tutorials and hands-on sessions are provided in t
 - Main reference(s): 
 
 <details><summary>To go further</summary>
+
+- [(Gallegos et al., 2025)](https://direct.mit.edu/coli/article/50/3/1097/121961/Bias-and-Fairness-in-Large-Language-Models-A): *Bias and Fairness in Large Language Models: A Survey*
+
 </details>
