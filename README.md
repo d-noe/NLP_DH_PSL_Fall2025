@@ -38,6 +38,9 @@ The code and notebooks for the tutorials and hands-on sessions are provided in t
 - [(Churchill & Singh, 2021)](https://doi.org/10.1145/3507900): *The Evolution of Topic Modeling*.
 - [(Li et al., 2024)](https://doi.org/10.1515/dsll-2024-0010): *Applying Topic Modeling to Literary Analysis: A Review*.
 - [(Gillings & Hardie, 2022)](https://doi.org/10.1093/llc/fqac075): *The interpretation of topic models for scholarly analysis: An evaluation and critique of current practice*.
+- [(Antoniak, 2023)](https://maria-antoniak.github.io/2022/07/27/topic-modeling-for-the-people.html): *Topic Modeling for the People*: an interesting blogpost by Maria Antoniak, sharing a set of steps that you can follow to get coherent topics from most datasets, primarily focusing on LDA. It provides as well many additional references to dig deeper.
+
+**Want more hands-on?** Check the [*To go further* section in code folder](./code/README.md#code_supp_2).
 
 </details>
 

@@ -4,7 +4,7 @@ This folder hosts the notebooks and code (in Pyhton) used in the different tutor
 
 
 - [Week 1](#code_week1): Familiarization with BERT-like models, using `transformers` package. Generation of embedding vectors and visualization; applications on word sense disambiguation, and semantic shifts exploration.
-- [Week 2](#code_week2)
+- [Week 2](#code_week2): Topic Modeling: follow a step-by-step implementation of a (simplified) version of BERTopic relying on `sentence_transformers` model representations and compare the output of different topic models. Experiments illustrated with a copurs of 19th century American recipes, and UN General Debate speeches.
 - [Week 3](#code_week3)
 - [Week 4](#code_week4)
 
@@ -57,12 +57,13 @@ The notebooks are provided in Google Colab. It provides a convenient way to run 
 - [Tutorial_2_MyBERTopic.ipynb](./2_topic_modeling/Tutorial_2_MyBERTopic.ipynb): Implement your own (simplified) version of BERTopic and explore a corpus of 19th century recipes.
 - [Hands_on_2_CompareTM.ipynb](./2_topic_modeling/Hands_on_2_CompareTM.ipynb): Apply different topic modeling algorithms on a corpus of UN General Debate speeches from 1946 until today. Try to find the best / most useful representations!
 
-**Main libraries**: `sentence_transformers`, `BERTopic`, `umap`, `hdbscan`, `sklearn`
+**Main libraries**: `sentence_transformers`, `BERTopic`, `sklearn`, `umap`, `hdbscan`
 
 <a name="code_supp_2"></a>
 <details><summary>To go further</summary> 
 
 - [Tutorial - Topic Modeling with BERTopic](https://colab.research.google.com/drive/1FieRA9fLdkQEGDIMYl0I3MCjSUKVF8C-#scrollTo=AXHLDxJdRzBi): A tutorial and overview of the different functionalities of `BERTopic` (Author unknown?).
+- [Tutorial - LDA Topic Modeling with `sklearn` and visualization with `pyLDAvis`](https://nbviewer.org/github/bmabey/pyLDAvis/blob/master/notebooks/LDA%20model.ipynb).
 
 </details>
 
