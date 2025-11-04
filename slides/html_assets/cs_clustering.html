@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Clustering Methods Cheatsheet</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    padding: 1em;
+    background: white;
+    color: #222;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .cheatsheet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em 1.5em;
+    width: 90%;
+    max-width: 1000px;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 0.3em;
+    grid-column: span 2;
+  }
+
+  p.intro {
+    color: #444;
+    margin-top: 0;
+    margin-bottom: 1em;
+    grid-column: span 2;
+  }
+
+  .box {
+    border-left: 4px solid;
+    padding: 0.6em 0.8em;
+    border-radius: 8px;
+    background: #fafafa;
+    box-shadow: 0 0 4px rgba(0,0,0,0.08);
+    transition: transform 0.15s ease-in-out;
+  }
+
+  .box:hover {
+    transform: translateY(-2px);
+  }
+
+  .box h3 {
+    margin: 0.2em 0;
+  }
+
+  ul {
+    margin: 0.4em 0;
+    padding-left: 1.2em;
+  }
+
+  .params {
+    font-size: 0.85em;
+    color: #444;
+  }
+
+  footer {
+    margin-top: 0.4em;
+    font-size: 0.8em;
+    color: #555;
+    grid-column: span 2;
+  }
+
+  /* Color codes for each method */
+  .kmeans { border-color: #4C9AFF; }
+  .dbscan { border-color: #FF8A65; }
+  .hdbscan { border-color: #AB47BC; }
+  .birch { border-color: #00BFA6; }
+</style>
+</head>
+<body>
+
+<div class="cheatsheet">
+  <p class="intro">Overview of common clustering algorithms and their main features.</p>
+
+  <div class="box kmeans">
+    <h3>K-means</h3>
+    <ul>
+      <li>Partitions data into <strong>K clusters</strong> minimizing within-cluster variance.</li>
+      <li>Assumes spherical, equally sized clusters.</li>
+      <li>Fast, scalable, but sensitive to outliers and initialization.</li>
+    </ul>
+    <div class="params"><strong>Key params:</strong> <code>n_clusters</code>, <code>init</code>, <code>n_init</code>, <code>max_iter</code></div>
+  </div>
+
+  <div class="box dbscan">
+    <h3>DBSCAN</h3>
+    <ul>
+      <li>Density-based: forms clusters of <strong>closely packed points</strong>.</li>
+      <li>Identifies outliers as noise; no need to predefine K.</li>
+      <li>Can struggle with varying densities or high-dimensional data.</li>
+    </ul>
+    <div class="params"><strong>Key params:</strong> <code>eps</code>, <code>min_samples</code>, <code>metric</code></div>
+  </div>
+
+  <div class="box hdbscan">
+    <h3>HDBSCAN</h3>
+    <ul>
+      <li>Hierarchical extension of DBSCAN with <strong>adaptive density</strong>.</li>
+      <li>Automatically finds stable clusters and handles noise robustly.</li>
+      <li>Excellent for high-dimensional embeddings (e.g., SBERT, UMAP).</li>
+    </ul>
+    <div class="params"><strong>Key params:</strong> <code>min_cluster_size</code>, <code>min_samples</code>, <code>cluster_selection_epsilon</code></div>
+  </div>
+
+  <div class="box birch">
+    <h3>BIRCH</h3>
+    <ul>
+      <li>Incremental clustering using a feature <strong>tree structure</strong>.</li>
+      <li>Handles large or streaming datasets efficiently.</li>
+      <li>Works best for roughly spherical clusters.</li>
+    </ul>
+    <div class="params"><strong>Key params:</strong> <code>threshold</code>, <code>branching_factor</code>, <code>n_clusters</code></div>
+  </div>
+
+  <footer>
+    💡 <strong>Tip:</strong> Use <em>K-means</em> for simple clusters, 
+    <em>DBSCAN/HDBSCAN</em> for arbitrary shapes and noise, 
+    <em>BIRCH</em> for large-scale or online data.
+  </footer>
+</div>
+
+</body>
+</html>

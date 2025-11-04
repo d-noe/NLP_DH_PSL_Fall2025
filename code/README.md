@@ -55,9 +55,9 @@ The notebooks are provided in Google Colab. It provides a convenient way to run 
 ### Week 2 — 05.11 <a name="code_week2"></a>
 
 - [Tutorial_2_MyBERTopic.ipynb](./2_topic_modeling/Tutorial_2_MyBERTopic.ipynb): Implement your own (simplified) version of BERTopic and explore a corpus of 19th century recipes.
-- [Hands_on_2_CompareTM.ipynb](./2_topic_modeling/Hands_on_2_CompareTM.ipynb): Apply different topic modeling algorithms on a corpus of UN General Debate speeches from 1946 until today. Try to find the best / most useful representations!
+- [Hands_on_2_CompareTM.ipynb](./2_topic_modeling/Hands_on_2_CompareTM.ipynb): Apply different topic modeling algorithms on a corpus of UN General Debate speeches transcripts from 1946 until today. Explore time and space, and try to find the best methods to decipher what is discussed during these assemblies!
 
-**Main libraries**: `sentence_transformers`, `BERTopic`, `sklearn`, `umap`, `hdbscan`
+**Main libraries**: `sentence_transformers`, `BERTopic`, `gensim`, `pyLDAvis`, `sklearn`, `umap`, `hdbscan`
 
 <a name="code_supp_2"></a>
 <details><summary>To go further</summary> 

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dimensionality Reduction Cheatsheet</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    padding: 1em;
+    background: white;
+    color: #222;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 0.4em;
+    grid-column: span 2;
+  }
+
+  p.intro {
+    text-align: center;
+    margin-bottom: 1em;
+    color: #444;
+    grid-column: span 2;
+  }
+
+  .cheatsheet {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* left = text, right = plots */
+    gap: 1em 2em;
+    max-width: 1000px;
+    width: 100%;
+  }
+
+  .left-column, .right-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+
+  .box {
+    border-left: 4px solid;
+    padding-left: 0.8em;
+    border-radius: 8px;
+    background: #fafafa;
+    box-shadow: 0 0 4px rgba(0,0,0,0.08);
+    transition: transform 0.15s ease-in-out;
+  }
+
+  .box:hover {
+    transform: translateY(-2px);
+  }
+
+  .box h3 {
+    margin: 0.2em 0;
+  }
+
+  ul {
+    margin: 0.4em 0;
+    padding-left: 1em;
+  }
+
+  .params {
+    font-size: 0.85em;
+    color: #444;
+  }
+
+  .image-wrapper {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 75%; /* keeps 4:3 aspect ratio */
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  }
+
+  .image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .image-wrapper:hover img {
+    transform: scale(1.05);
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0.3em;
+    right: 0.3em;
+    background: rgba(0,0,0,0.65);
+    color: #fff;
+    font-size: 0.7em;
+    padding: 0.25em 0.4em;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .image-wrapper:hover .overlay {
+    opacity: 1;
+  }
+
+  .mds { border-color: #4C9AFF; }
+  .pca { border-color: #00BFA6; }
+  .tsne { border-color: #FF8A65; }
+  .umap { border-color: #AB47BC; }
+
+  .img-mds { border: 3px solid #4C9AFF; }
+  .img-pca { border: 3px solid #00BFA6; }
+  .img-tsne { border: 3px solid #FF8A65; }
+  .img-umap { border: 3px solid #AB47BC; }
+
+  footer {
+    margin-top: 0.6em;
+    font-size: 1em;
+    color: #555;
+    grid-column: span 2;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="cheatsheet">
+  <!-- LEFT COLUMN: Method explanations -->
+  <div class="left-column">
+    <div class="box mds">
+      <h3>MDS (Multidimensional Scaling)</h3>
+      <ul>
+        <li>Preserves pairwise <strong>distances</strong>.</li>
+        <li>Good for small datasets, metric interpretability.</li>
+        <li>Computationally expensive (to untractable) for large datasets.</li>
+      </ul>
+      <div class="params"><strong>Key params:</strong> <code>metric</code>, <code>n_init</code>, <code>max_iter</code></div>
+    </div>
+
+    <div class="box pca">
+      <h3>PCA (Principal Component Analysis)</h3>
+      <ul>
+        <li>Linear projection maximizing <strong>variance</strong>.</li>
+        <li>Fast, deterministic, interpretable axes.</li>
+        <li>Captures global but not nonlinear structure.</li>
+      </ul>
+    </div>
+
+    <div class="box tsne">
+      <h3>t-SNE (t-Distributed Stochastic Neighbor Embedding)</h3>
+      <ul>
+        <li>Preserves <strong>local neighborhoods</strong>.</li>
+        <li>Excellent for cluster visualization.</li>
+        <li>Nonlinear, stochastic, slower.</li>
+      </ul>
+      <div class="params"><strong>Key params:</strong> <code>perplexity</code>, <code>learning_rate</code>, <code>n_iter</code></div>
+    </div>
+
+    <div class="box umap">
+      <h3>UMAP (Uniform Manifold Approximation and Projection)</h3>
+      <ul>
+        <li>Preserves <strong>local + global</strong> structure.</li>
+        <li>Scalable and fast.</li>
+        <li>Good for semantic visualization of embeddings.</li>
+      </ul>
+      <div class="params"><strong>Key params:</strong> <code>n_neighbors</code>, <code>min_dist</code>, <code>metric</code></div>
+    </div>
+
+    <footer>
+      💡 <strong>Tip:</strong> Use <em>PCA</em> for preprocessing and transformation interpretability, 
+      <em>t-SNE</em> or <em>UMAP</em> for visualization, 
+      <em>MDS</em> for preserving metric geometry.
+    </footer>
+  </div>
+
+  <!-- RIGHT COLUMN: Quadrant plots -->
+  <div class="right-column">
+    <div class="image-wrapper img-mds">
+      <img src="images/mds_example.png" alt="MDS output">
+      <div class="overlay">Time: 99.83878087997437s</div>
+    </div>
+    <div class="image-wrapper img-pca">
+      <img src="images/pca_example.png" alt="PCA output">
+      <div class="overlay">Time: 0.07999801635742188s</div>
+    </div>
+    <div class="image-wrapper img-tsne">
+      <img src="images/tsne_example.png" alt="t-SNE output">
+      <div class="overlay">Time: 14.395962238311768s</div>
+    </div>
+    <div class="image-wrapper img-umap">
+      <img src="images/umap_example.png" alt="UMAP output">
+      <div class="overlay">Time: 5.930189371109009s</div>
+    </div>
+
+    <footer style="font-size: 0.8em;">
+      🔬 <strong>Experiment:</strong> Illustrations based on ~2K excerpts of <it>20Newsgroups</it>, covering 4 topics.
+      Dimensionality reduction methods applied to 384-dimensional embeddings obtained with <tt>all-MiniLM-L6-v2</tt> SentenceTransformer, 
+      using cosine distance for MDS and default arguments from <tt>sklearn</tt> and <tt>umap</tt> libraries for PCA, t-SNE, and UMAP.
+    </footer>
+  </div>
+</div>
+
+</body>
+</html>

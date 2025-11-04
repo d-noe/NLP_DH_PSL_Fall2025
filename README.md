@@ -25,20 +25,26 @@ The code and notebooks for the tutorials and hands-on sessions are provided in t
 
 </details>
 
-## Week 2 (05/11): *Discovering Structure: Semantic Spaces & Unsupervised Modelling* <a name="week2"></a>
+## Week 2 (05/11): *Discovering Structure: Semantic Spaces & Unsupervised Modeling* <a name="week2"></a>
 
 - Slides: 
 - Notebook(s): 
-- Key notions: cosine similarity, retrieval, clustering
-- Main reference(s): 
+- Key notions: document representation, BoW, SentenceTransformer, cosine similarity, topic modeling, BERTopic, LDA
 
 <details><summary>To go further</summary>
+
+**Dimensionality Reduction**:
+- [(Coenen & Pierce, 2019)](https://pair-code.github.io/understanding-umap/): *Understanding UMAP*: explanations and visual demonstration of UMAP (compared with t-SNE).
 
 **Topic Modeling**:
 - [(Churchill & Singh, 2021)](https://doi.org/10.1145/3507900): *The Evolution of Topic Modeling*.
 - [(Li et al., 2024)](https://doi.org/10.1515/dsll-2024-0010): *Applying Topic Modeling to Literary Analysis: A Review*.
 - [(Gillings & Hardie, 2022)](https://doi.org/10.1093/llc/fqac075): *The interpretation of topic models for scholarly analysis: An evaluation and critique of current practice*.
 - [(Antoniak, 2023)](https://maria-antoniak.github.io/2022/07/27/topic-modeling-for-the-people.html): *Topic Modeling for the People*: an interesting blogpost by Maria Antoniak, sharing a set of steps that you can follow to get coherent topics from most datasets, primarily focusing on LDA. It provides as well many additional references to dig deeper.
+- [(Egger & Yu, 2022)](https://pmc.ncbi.nlm.nih.gov/articles/PMC9120935/): *A Topic Modeling Comparison Between LDA, NMF, Top2Vec, and BERTopic to Demystify Twitter Posts*.
+- **Evaluation Concerns**:
+    - [(Chang et al., 2009)](https://papers.nips.cc/paper_files/paper/2009/hash/f92586a25bb3145facd64ab20fd554ff-Abstract.html): *Reading Tea Leaves: How Humans Interpret Topic Models*.
+    - [(Hoyle et al., 2021)](https://proceedings.neurips.cc/paper/2021/file/0f83556a305d789b1d71815e8ea4f4b0-Paper.pdf): *Is Automated Topic Model Evaluation Broken?: The Incoherence of Coherence*.
 
 **Want more hands-on?** Check the [*To go further* section in code folder](./code/README.md#code_supp_2).
 
@@ -49,7 +55,6 @@ The code and notebooks for the tutorials and hands-on sessions are provided in t
 - Slides: 
 - Notebook(s): 
 - Key notions: classification, fine-tuning
-- Main reference(s): 
 
 <details><summary>To go further</summary>
 </details>
@@ -59,7 +64,6 @@ The code and notebooks for the tutorials and hands-on sessions are provided in t
 - Slides: 
 - Notebook(s): 
 - Key notions: LLMs
-- Main reference(s): 
 
 <details><summary>To go further</summary>
 

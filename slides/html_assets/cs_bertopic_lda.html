@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Topic Modeling Cheatsheet</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    padding: 1em;
+    background: white;
+    color: #222;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .cheatsheet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em 2em;
+    width: 90%;
+    max-width: 1100px;
+  }
+
+  h2 {
+    grid-column: span 2;
+    text-align: center;
+    margin-bottom: 0.2em;
+  }
+
+  p.intro {
+    grid-column: span 2;
+    text-align: center;
+    color: #444;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .header {
+    text-align: center;
+    font-weight: 600;
+    background: #f2f2f2;
+    padding: 0.4em;
+    border-radius: 6px;
+  }
+
+  .lda-header { background: #e3f2fd; border-left: 4px solid #42a5f5; }
+  .bertopic-header { background: #f3e5f5; border-left: 4px solid #ab47bc; }
+
+  .row {
+    display: contents;
+  }
+
+  .label {
+    grid-column: span 2;
+    text-align: center;
+    font-weight: bold;
+    color: #555;
+    margin-top: 0.4em;
+  }
+
+  .cell {
+    background: #fafafa;
+    border-left: 4px solid;
+    padding: 0.6em 0.8em;
+    border-radius: 8px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.08);
+    line-height: 1.4em;
+  }
+
+  .lda { border-color: #42a5f5; }
+  .bertopic { border-color: #ab47bc; }
+
+  ul {
+    margin: 0.4em 0;
+    padding-left: 1.2em;
+  }
+
+  footer {
+    grid-column: span 2;
+    margin-top: 0.6em;
+    font-size: 0.8em;
+    color: #555;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="cheatsheet">
+  <div class="header lda-header">LDA (Latent Dirichlet Allocation)</div>
+  <div class="header bertopic-header">BERTopic</div>
+
+  <!-- Concept: Core Idea -->
+  <div class="cell lda">
+    <ul>
+      <li>Probabilistic generative model of word co-occurrence.</li>
+      <li>Documents are mixtures of topics; topics are word distributions.</li>
+      <li>Assumes “bag-of-words” representation.</li>
+    </ul>
+  </div>
+  <div class="cell bertopic">
+    <ul>
+      <li>Leverages <strong>transformer embeddings</strong> for document semantics.</li>
+      <li>Clusters embeddings (e.g., via HDBSCAN) to find topics.</li>
+      <li>Uses <strong>c-TF-IDF</strong> to extract representative words per cluster.</li>
+    </ul>
+  </div>
+
+  <!-- Concept: Input Representation -->
+  <div class="cell lda">
+    <ul>
+      <li>Term-frequency or TF-IDF matrix (sparse count-based input).</li>
+      <li>No context between words.</li>
+    </ul>
+  </div>
+  <div class="cell bertopic">
+    <ul>
+      <li>Sentence/document embeddings (dense contextual vectors).</li>
+      <li>Captures semantics beyond simple co-occurrence.</li>
+    </ul>
+  </div>
+
+  <!-- Concept: Modeling Method -->
+  <div class="cell lda">
+    <ul>
+      <li>Bayesian inference over topic-word and doc-topic distributions.</li>
+      <li>Typically trained via Gibbs sampling or variational Bayes.</li>
+    </ul>
+  </div>
+  <div class="cell bertopic">
+    <ul>
+      <li>Dimensionality reduction (e.g., UMAP) → clustering (HDBSCAN).</li>
+      <li>Topic representation refined with c-TF-IDF and optionally merged.</li>
+    </ul>
+  </div>
+
+  <!-- Concept: Output & Interpretation -->
+  <div class="cell lda">
+    <ul>
+      <li>Topic-word probabilities; document-topic probabilities.</li>
+      <li>Interpretable word lists, but may mix semantically close topics.</li>
+    </ul>
+  </div>
+  <div class="cell bertopic">
+    <ul>
+      <li>Topic clusters with keywords and representative documents.</li>
+      <li>Can capture fine-grained or semantic topics.</li>
+    </ul>
+  </div>
+
+  <!-- Concept: Practical Aspects -->
+  <div class="cell lda">
+    <ul>
+      <li>Requires predefining <strong>n_topics</strong>.</li>
+      <li>Works well for large, homogeneous corpora.</li>
+      <li>Efficient, interpretable, but limited by vocabulary and context.</li>
+    </ul>
+  </div>
+  <div class="cell bertopic">
+    <ul>
+      <li>Automatically determines number of topics via clustering.</li>
+      <li>Flexible, multilingual, adaptable to embeddings.</li>
+      <li>Less interpretable, depends on embedding quality.</li>
+    </ul>
+  </div>
+
+  <footer>
+    💡 <strong>Summary:</strong> <em>LDA</em> uncovers word co-occurrence patterns in a count space.  
+    <em>BERTopic</em> discovers semantic clusters in an embedding space.
+  </footer>
+</div>
+
+</body>
+</html>
