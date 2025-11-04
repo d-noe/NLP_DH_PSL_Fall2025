@@ -27,8 +27,8 @@ The code and notebooks for the tutorials and hands-on sessions are provided in t
 
 ## Week 2 (05/11): *Discovering Structure: Semantic Spaces & Unsupervised Modeling* <a name="week2"></a>
 
-- Slides: 
-- Notebook(s): 
+- Slides: [preview `html`](https://rawcdn.githack.com/d-noe/NLP_DH_PSL_Fall2025/refs/heads/main/slides/lecture_2_self_contained.html), [`pdf`](./slides/lecture_2.pdf)
+- Notebook(s): [Custom BERTopic](./code/2_topic_modeling/Tutorial_2_MyBERTopic.ipynb), [Topic Modeling UN General Debates Speeches](./code/2_topic_modeling/Hands_on_2_CompareTM.ipynb)
 - Key notions: document representation, BoW, SentenceTransformer, cosine similarity, topic modeling, BERTopic, LDA
 
 <details><summary>To go further</summary>
