@@ -64,6 +64,7 @@ The notebooks are provided in Google Colab. It provides a convenient way to run 
 
 - [Tutorial - Topic Modeling with BERTopic](https://colab.research.google.com/drive/1FieRA9fLdkQEGDIMYl0I3MCjSUKVF8C-#scrollTo=AXHLDxJdRzBi): A tutorial and overview of the different functionalities of `BERTopic` (Author unknown?).
 - [Tutorial - LDA Topic Modeling with `sklearn` and visualization with `pyLDAvis`](https://nbviewer.org/github/bmabey/pyLDAvis/blob/master/notebooks/LDA%20model.ipynb).
+- [Understanding and Using Common Similarity Measures for Text Analysis](https://doi.org/10.46430/phen0089): A detailed tutorial on computing distances on text document (using BoW-like representations) in Python, applied to data from the [EarlyPrint](https://earlyprint.org) initiative. ©John R. Ladd (2020).
 
 </details>
 
