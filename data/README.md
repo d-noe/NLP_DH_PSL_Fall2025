@@ -11,6 +11,7 @@ This folder hosts the data used in the different tutorials and hands-on sessions
     - [4Newsgroups](#20nwsgrps)
     - [UNGDC](#ungdc)
 - [Week 3](#data_week3)
+  - Supervised Fine Tuning: [BooksChunks](#bookschunks)
 - [Week 4](#data_week4)
 
 The [`preprocessing`](./preprocessing/) folder contains pre-processing scripts used to obtain the presented data files. It is included for transparency and to allow reproduction, but was not developed for pedagogical purposes (-> the code is likely quick and dirty).
@@ -67,7 +68,17 @@ Data from the [Living With Machines](https://livingwithmachines.ac.uk) programme
 
 ## Week 3 — 12.11 <a name="data_week3"></a>
 
-TBD
+### Tutorial 3: Book Genre Classification <a name="bookschunks"></a>
+
+- File(s): [`literary_sft/sampled_chunks.csv`](./literary_sft/sampled_chunks.csv) | (Metadata: [`literary_sft/retained_books.csv`](./literary_sft/retained_books.csv) )
+- Description:
+  - 5-sentences excerpts from books sourced from [Project Gutenberg](https://www.gutenberg.org/). The original dataset contains nearly 6M chunks, here it is reduced to ~19.5K chunks randomly extracted from 1,000 books balanced over 4 genres (detective and mystery stories; science fiction; adventure stories; and children's stories). The data is furthered split into train, validation and test samples.
+  - Columns: 
+    - `sampled_chunks.csv`: `book_id`, `chunk_id`, `text`, `author_gender`, `label`, `split`
+    - `retained_books.csv`: `book_id`, `title`, `author`, `author_gender`, `author_birth_year`, `author_death_year`, `pg_subjects`, `topic`
+  - Note: to prevent important data leakage, there cannot be chunks from the same book in different data splits.
+- Source: *Despina Christou & Grigorios Tsoumakas. (2025). Artificial Relationships in Fiction: A Dataset for Advancing NLP in Literary Domains.  In Proceedings of the 9th Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature (LaTeCH-CLfL 2025) (pp. 130–147). Association for Computational Linguistics.* [Paper](https://aclanthology.org/2025.latechclfl-1.13/) | [Source Dataset](https://huggingface.co/datasets/Despina/project_gutenberg)
+
 
 ## Week 4 — 19.11 <a name="data_week4"></a>
 

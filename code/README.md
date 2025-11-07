@@ -70,7 +70,16 @@ The notebooks are provided in Google Colab. It provides a convenient way to run 
 
 ### Week 3 — 12.11 <a name="code_week3"></a>
 
-TBD
+- [Tutorial_3_SFT.ipynb](./3_supervised/Tutorial_3_SFT.ipynb): Fine-tune a BERT-like model for literary genre classification based on 5-sentences long book chunks. Compare the results with classification performed by standard classifiers trained on document representations (BoW, TF-IDF, SentenceTransformers' embeddings).
+
+**Main libraries**: `transformers`, `pytorch`, `sklearn`
+
+<a name="code_supp_3"></a>
+<details><summary>To go further</summary> 
+
+- [Tutorial: Fine-tuning ](https://colab.research.google.com/github/huggingface/cookbook/blob/main/notebooks/en/fine_tuning_code_llm_on_single_gpu.ipynb): *Fine-tuning a Code LLM on Custom Code on a single GPU*, by Maria Khalusova.
+
+</details>
 
 ### Week 4 — 19.11 <a name="code_week4"></a>
 
