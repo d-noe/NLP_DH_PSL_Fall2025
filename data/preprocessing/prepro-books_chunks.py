@@ -42,7 +42,7 @@ DATASET_SUBSET_1 = "fiction_books"
 DATASET_SUBSET_2 = "fiction_books_in_chunks"
 
 OUTPUT_DIR = "../literary_sft/"
-DO_ZIP = True
+DO_ZIP = False
 
 SUBSET_SELECTED_TOPICS = [
     'detective and mystery stories',
