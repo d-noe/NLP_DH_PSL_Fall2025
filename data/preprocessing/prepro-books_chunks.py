@@ -17,6 +17,8 @@ SAVED OUTPUTS:
             - author_gender: encoded inferred (binary) author gender
     - `sampled_chunks.csv`:
         csv file that concatenates the splits of the dataset (same columns + 'split')
+    - `sampled_chunks.zip`: (if `DO_ZIP` set to `True`):
+        zipped version of `sampled_chuks` dataset
 
 Note: to prevent important data leakage, there cannot be chunks from the same book in different data splits.
 
@@ -24,8 +26,10 @@ Note: to prevent important data leakage, there cannot be chunks from the same bo
 """
 import os
 import sys
+import zipfile
 import numpy as np
 import pandas as pd
+from pathlib import Path
 from collections import Counter
 from sklearn.model_selection import train_test_split
 from datasets import load_dataset, Dataset, DatasetDict, ClassLabel
@@ -38,6 +42,7 @@ DATASET_SUBSET_1 = "fiction_books"
 DATASET_SUBSET_2 = "fiction_books_in_chunks"
 
 OUTPUT_DIR = "../literary_sft/"
+DO_ZIP = True
 
 SUBSET_SELECTED_TOPICS = [
     'detective and mystery stories',
@@ -59,6 +64,14 @@ def confirm_download():
     if user_input not in ("y", "yes"):
         print("Aborting...")
         sys.exit(0)
+
+def zip_dir(src_dir):
+    src_dir = Path(src_dir)
+    zip_path = src_dir.with_suffix(".zip")
+    with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED) as z:
+        for file in src_dir.rglob("*"):
+            z.write(file, file.relative_to(src_dir))
+    return zip_path
 
 # ------------------------------------------------------------
 # SELECTION & FILTERING
@@ -364,6 +377,10 @@ def main():
     df = pd.concat(splits_dfs)
     csv_save_path = os.path.join(OUTPUT_DIR, "sampled_chunks.csv")
     df.to_csv(csv_save_path, index=False)
+
+    ### Also save as zip
+    if DO_ZIP:
+        zip_dir(src_dir=os.path.join(OUTPUT_DIR, "sampled_chunks"))
 
 
 if __name__ == "__main__":
