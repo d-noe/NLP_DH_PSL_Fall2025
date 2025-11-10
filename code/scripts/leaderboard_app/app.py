@@ -14,6 +14,7 @@ from utils.charts import (
     plot_confusion_matrices 
 )
 from utils.encode_decode import encode_b64, decode_b64_into_df
+from utils.submission_check import check_before_submission
 
 
 # =========================
@@ -66,11 +67,12 @@ if "submitted_files" not in st.session_state:
 
 uploaded_file = st.file_uploader("Drop your predictions CSV here", type=["csv"])
 
-if uploaded_file is not None and uploaded_file.name not in st.session_state.submitted_files:
+if (uploaded_file is not None) and (uploaded_file.name not in st.session_state.submitted_files):
     try:
         preds = pd.read_csv(uploaded_file)
-        if "prediction" not in preds.columns:
-            st.error("Your file must contain a 'prediction' column.")
+        submission_compliant = check_before_submission(preds)
+        if not submission_compliant:
+            st.error("Your file does not have the correct format.")
         else:
             st.success("✅ File successfully uploaded!")
 
