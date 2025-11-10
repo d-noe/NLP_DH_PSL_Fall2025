@@ -53,8 +53,8 @@ The code and notebooks for the tutorials and hands-on sessions are provided in t
 ## Week 3 (12/11): *Inferring Patterns: Supervised Tasks and Adaptation* <a name="week3"></a>
 
 - Slides: 
-- Notebook(s): 
-- Key notions: classification, supervised fine-tuning,
+- Notebook(s): [BERT Fine-Tuning Tutorial](./code/3_supervised/Tutorial_3_SFT.ipynb), [Canonicity Prediction Challenge: Performance and Fairness](./code/3_supervised/Hands_on_3_CanonChallenge.ipynb)
+- Key notions: classification, supervised fine-tuning, performance metrics, fairness
 
 <details><summary>To go further</summary>
 
