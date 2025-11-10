@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import pandas as pd
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
@@ -20,9 +21,8 @@ from utils.encode_decode import encode_b64, decode_b64_into_df
 # =========================
 st.set_page_config(page_title="Tutorial Leaderboard", layout="wide")
 
-#SECRET_PATH = "data/true_labels.csv"  # Keep this file on the server only
-SECRET_PATH = "data/canon_secret_test.csv"  # Keep this file on the server only
 RESULTS_PATH = "results/leaderboard.csv"
+os.makedirs(os.path.dirname(RESULTS_PATH), exist_ok=True)
 
 # =========================
 # AUTO-REFRESH
