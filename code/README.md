@@ -4,8 +4,8 @@ This folder hosts the notebooks and code (in Pyhton) used in the different tutor
 
 
 - [Week 1](#code_week1): Familiarization with BERT-like models, using `transformers` package. Generation of embedding vectors and visualization; applications on word sense disambiguation, and semantic shifts exploration.
-- [Week 2](#code_week2): Topic Modeling: follow a step-by-step implementation of a (simplified) version of BERTopic relying on `sentence_transformers` model representations and compare the output of different topic models. Experiments illustrated with a copurs of 19th century American recipes, and UN General Debate speeches.
-- [Week 3](#code_week3)
+- [Week 2](#code_week2): Topic Modeling: follow a step-by-step implementation of a (simplified) version of BERTopic relying on `sentence_transformers` model representations and compare the output of different topic models. Experiments illustrated with a corpus of 19th century American recipes, and UN General Debate speeches.
+- [Week 3](#code_week3): Supervised Learning: Tutorial of BERT-like model fine-tuning applied to book genre prediction (compared with document representation-based baselines). Hands-on applied to "literary canon" prediction: design your own classifier and reflect on fairness issues in ML.
 - [Week 4](#code_week4)
 
 ## Setups <a name="setup"></a>
@@ -71,6 +71,7 @@ The notebooks are provided in Google Colab. It provides a convenient way to run 
 ### Week 3 — 12.11 <a name="code_week3"></a>
 
 - [Tutorial_3_SFT.ipynb](./3_supervised/Tutorial_3_SFT.ipynb): Fine-tune a BERT-like model for literary genre classification based on 5-sentences long book chunks. Compare the results with classification performed by standard classifiers trained on document representations (BoW, TF-IDF, SentenceTransformers' embeddings).
+- [Hands_on_3_CanonChallenge.ipynb](./3_supervised/Hands_on_3_CanonChallenge.ipynb): Your time to devise a classifier for "canonicity" prediction based on 5-sentences long excerpts of French-language novels. Reflect about the data, the models, and the fairness implications of both. Implement you classifier and submit your predictions to the *Performance & Fairness class leaderboard*!
 
 **Main libraries**: `transformers`, `pytorch`, `sklearn`
 
