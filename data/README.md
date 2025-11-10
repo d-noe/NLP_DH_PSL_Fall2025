@@ -12,6 +12,7 @@ This folder hosts the data used in the different tutorials and hands-on sessions
     - [UNGDC](#ungdc)
 - [Week 3](#data_week3)
   - Supervised Fine Tuning: [BooksChunks](#bookschunks)
+  - Canonicity Prediction: [CanonChallenge](#canonchallenge)
 - [Week 4](#data_week4)
 
 The [`preprocessing`](./preprocessing/) folder contains pre-processing scripts used to obtain the presented data files. It is included for transparency and to allow reproduction, but was not developed for pedagogical purposes (-> the code is likely quick and dirty).
@@ -78,6 +79,20 @@ Data from the [Living With Machines](https://livingwithmachines.ac.uk) programme
     - `retained_books.csv`: `book_id`, `title`, `author`, `author_gender`, `author_birth_year`, `author_death_year`, `pg_subjects`, `topic`
   - Note: to prevent important data leakage, there cannot be chunks from the same book in different data splits.
 - Source: *Despina Christou & Grigorios Tsoumakas. (2025). Artificial Relationships in Fiction: A Dataset for Advancing NLP in Literary Domains.  In Proceedings of the 9th Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature (LaTeCH-CLfL 2025) (pp. 130–147). Association for Computational Linguistics.* [Paper](https://aclanthology.org/2025.latechclfl-1.13/) | [Source Dataset](https://huggingface.co/datasets/Despina/project_gutenberg)
+
+### Hands-on 3: Canonicity Prediction <a name="canonchallenge"></a>
+
+- File(s): [`canon_challenge/dataset`](./canon_challenge/dataset)
+- Description:
+  - This dataset is based on the ANRChapitres Corpus: A corpus of 2031 copyright-free French-language novels published between the early XIXth to mid XXth century. It was devised as part of the [ANR Chapitres project](https://chapitres.hypotheses.org/presentation). Notably, this coprus was annotated with "canonicity" tags (whether the novel is considered part of the literary canon based on a posteriori, modern, considerations).
+  - The provided version is a sampled version of the original corpus, where text chunks are extracted from the book. The excerpts are five-sentence long segments extracted at the beginning of (at maximum) 10 random chapters of the books. It is further partitionned into train/validation/test splits. It is provided as an arrow-formatted dataset.
+  - Columns: `author`, `author_gender`, `book_title`, `publication_year`, `text`, `label`
+  - Note: Partition is made at the book level. The labels of the test set in [`canon_challenge/dataset`](./canon_challenge/dataset) are kept secret!
+- Source: *ANRChapitres/2000romans19e20e: Corpus Chapitres* (Leblond et al., 2023). Data Repository: [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.18914.svg)](https://doi.org/10.5281/zenodo.7446728) 
+  - For additional references, about this corpus and the 'canonicity' tag, see e.g; [*Operationalizing Canonicity* (Barré et al., 2023)](https://culturalanalytics.org/article/88113-operationalizing-canonicity-a-quantitative-study-of-french-19th-and-20th-century-literature.).
+
+
+Ce corpus de 2031 romans francophones libres de droit qui couvre de 1813 au milieu du 20e siècle a été rassemblé à des fins de fouille textuelle en littérature, dans le cadre du [projet ANR Chapitres](https://chapitres.hypotheses.org/presentation). Nous souhaitons le rendre disponible à la communauté des chercheurs afin qu’ils puissent en bénéficier pour leurs propres recherches.
 
 
 ## Week 4 — 19.11 <a name="data_week4"></a>
