@@ -52,7 +52,7 @@ The code and notebooks for the tutorials and hands-on sessions are provided in t
 
 ## Week 3 (12/11): *Inferring Patterns: Supervised Tasks and Adaptation* <a name="week3"></a>
 
-- Slides: 
+- Slides: [preview `html`](), [`pdf`](./slides/lecture_3.pdf)
 - Notebook(s): [BERT Fine-Tuning Tutorial](./code/3_supervised/Tutorial_3_SFT.ipynb), [Canonicity Prediction Challenge: Performance and Fairness](./code/3_supervised/Hands_on_3_CanonChallenge.ipynb)
 - Key notions: classification, supervised fine-tuning, performance metrics, fairness
 
@@ -62,8 +62,16 @@ The code and notebooks for the tutorials and hands-on sessions are provided in t
 - [(Bamman et al., 2024)](https://ceur-ws.org/Vol-3834/paper119.pdf): *On Classification with Large Language Models in Cultural Analytics*.
 - [(Lassen et al., 2024)](https://ceur-ws.org/Vol-3834/paper76.pdf): *Literary Canonicity and Algorithmic Fairness: The Effect of Author Gender on Classification Models*.
 
-**Fairness**
+**Fairness & Bias**
 - [(Solon Barocas, Moritz Hardt, Arvind Narayanan, 2023)](https://fairmlbook.org): *FAIRNESS AND MACHINE LEARNING - Limitations and Opportunities* — Full book available with additional resources.
+- [(Irving & Askell, 2019)](10.23915/distill.00014): *AI Safety Needs Social Scientists*.
+- [(Blodgett et al., 2020)](https://aclanthology.org/2020.acl-main.485/): *Language (Technology) is Power: A Critical Survey of ``Bias'' in NLP.*
+- [(Hovy & Prabhumoye)](https://pmc.ncbi.nlm.nih.gov/articles/PMC9285808/pdf/LNC3-15-0.pdf): *Five sources of bias in natural language processing*.
+- [(Gallegos et al., 2024)](https://aclanthology.org/2024.cl-3.8.pdf): *Bias and Fairness in Large Language Models: A Survey*.
+
+**Interpretability**
+- [Interpretability Blog-post](https://blog.ml.cmu.edu/2020/08/31/6-interpretability/)
+- [(Olah et al., 2018)](10.23915/distill.00010): *The Building Blocks of Interpretability*: Mainly focusing (or applying) on computer vision, but a very nice and illustrated article on interpretability. 
 
 </details>
 
