@@ -92,8 +92,6 @@ Data from the [Living With Machines](https://livingwithmachines.ac.uk) programme
   - For additional references, about this corpus and the 'canonicity' tag, see e.g; [*Operationalizing Canonicity* (Barré et al., 2023)](https://culturalanalytics.org/article/88113-operationalizing-canonicity-a-quantitative-study-of-french-19th-and-20th-century-literature.).
 
 
-Ce corpus de 2031 romans francophones libres de droit qui couvre de 1813 au milieu du 20e siècle a été rassemblé à des fins de fouille textuelle en littérature, dans le cadre du [projet ANR Chapitres](https://chapitres.hypotheses.org/presentation). Nous souhaitons le rendre disponible à la communauté des chercheurs afin qu’ils puissent en bénéficier pour leurs propres recherches.
-
 
 ## Week 4 — 19.11 <a name="data_week4"></a>
 
