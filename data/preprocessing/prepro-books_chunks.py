@@ -50,6 +50,8 @@ SUBSET_SELECTED_TOPICS = [
     'adventure stories',
     "children's stories",
 ]
+
+SEED = 42
 # ------------------------------------------------------------
 # Helpers
 # ------------------------------------------------------------
@@ -134,7 +136,7 @@ def sample_books(
             unique_authors = subset.drop_duplicates(subset=['author'], keep='first')
             n_available = len(unique_authors)
             if n_available >= target:
-                return unique_authors.sample(n=target, random_state=42)
+                return unique_authors.sample(n=target, random_state=SEED)
             else:
                 # Take all unique authors first
                 sampled = unique_authors.copy()
@@ -144,7 +146,7 @@ def sample_books(
                 remaining_pool = subset.loc[~subset['book_id'].isin(sampled['book_id'])]
                 if len(remaining_pool) > 0:
                     extra = remaining_pool.sample(
-                        n=min(remaining_n, len(remaining_pool)), random_state=42
+                        n=min(remaining_n, len(remaining_pool)), random_state=SEED
                     )
                     sampled = pd.concat([sampled, extra])
                 return sampled
@@ -160,7 +162,7 @@ def sample_books(
             remaining_pool = group.loc[~group['book_id'].isin(sampled['book_id'])]
             if len(remaining_pool) > 0:
                 top_up = remaining_pool.sample(
-                    n=min(len(remaining_pool), n_total - len(sampled)), random_state=42
+                    n=min(len(remaining_pool), n_total - len(sampled)), random_state=SEED
                 )
                 sampled = pd.concat([sampled, top_up])
         
@@ -203,7 +205,7 @@ def sample_book_chunks(
     # Group by book_id and sample
     def sample_indices_per_book(group):
         n_to_sample = min(len(group), chunks_per_book_target)
-        return group.sample(n=n_to_sample, random_state=42)["idx"].tolist()
+        return group.sample(n=n_to_sample, random_state=SEED)["idx"].tolist()
 
     sampled_indices = (
         df_index.groupby("book_id", group_keys=False)
@@ -250,22 +252,22 @@ def split_sampled_chunks(
             book_df,
             test_size=0.2,
             stratify=book_df["strat_key_fixed"],
-            random_state=42,
+            random_state=SEED,
         )
     except ValueError:
         print("⚠️ Falling back to random split (too few strata).")
-        train_books, temp_books = train_test_split(book_df, test_size=0.2, random_state=42)
+        train_books, temp_books = train_test_split(book_df, test_size=0.2, random_state=SEED)
 
     try:
         val_books, test_books = train_test_split(
             temp_books,
             test_size=0.5,
             stratify=temp_books["strat_key_fixed"],
-            random_state=42,
+            random_state=SEED,
         )
     except ValueError:
         print("⚠️ Falling back to random val/test split.")
-        val_books, test_books = train_test_split(temp_books, test_size=0.5, random_state=42)
+        val_books, test_books = train_test_split(temp_books, test_size=0.5, random_state=SEED)
 
     # --- 4. Build lookup sets of book_ids per split ---
     train_book_ids = set(train_books["book_id"])

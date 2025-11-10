@@ -78,6 +78,7 @@ The notebooks are provided in Google Colab. It provides a convenient way to run 
 <details><summary>To go further</summary> 
 
 - [Tutorial: Fine-tuning ](https://colab.research.google.com/github/huggingface/cookbook/blob/main/notebooks/en/fine_tuning_code_llm_on_single_gpu.ipynb): *Fine-tuning a Code LLM on Custom Code on a single GPU*, by Maria Khalusova.
+- Tutorial: Interpreting BERT's classification decisions: *Interpreting the Prediction of BERT Model for Text Classification*, by Ruben Winastwan. ([Blog post](https://towardsdatascience.com/interpreting-the-prediction-of-bert-model-for-text-classification-5ab09f8ef074/) | [Notebook](https://github.com/mrubenw/medium-resources/blob/main/BERT_Captum/Bert_captum.ipynb))
 
 </details>
 

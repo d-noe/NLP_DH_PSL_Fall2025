@@ -54,9 +54,17 @@ The code and notebooks for the tutorials and hands-on sessions are provided in t
 
 - Slides: 
 - Notebook(s): 
-- Key notions: classification, fine-tuning
+- Key notions: classification, supervised fine-tuning,
 
 <details><summary>To go further</summary>
+
+**Text Classification for DH**
+- [(Bamman et al., 2024)](https://ceur-ws.org/Vol-3834/paper119.pdf): *On Classification with Large Language Models in Cultural Analytics*.
+- [(Lassen et al., 2024)](https://ceur-ws.org/Vol-3834/paper76.pdf): *Literary Canonicity and Algorithmic Fairness: The Effect of Author Gender on Classification Models*.
+
+**Fairness**
+- [(Solon Barocas, Moritz Hardt, Arvind Narayanan, 2023)](https://fairmlbook.org): *FAIRNESS AND MACHINE LEARNING - Limitations and Opportunities* — Full book available with additional resources.
+
 </details>
 
 ## Week 4 (19/11):  *LLMs** (TBD) <a name="week4"></a>
