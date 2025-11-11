@@ -61,6 +61,8 @@ def plot_tradeoff_multi(df_beta):
 # ------------------------ FAIRNESS CHART -------------------------
 # =================================================================
 
+from metrics import FAIRNESS_METRICS
+
 def plot_fairness_ratios(row, epsilon=0.8, title=None):
     """
     Generates a fairness indicators plot for a given submission (row from leaderboard).
@@ -87,12 +89,16 @@ def plot_fairness_ratios(row, epsilon=0.8, title=None):
         title = f"Fairness Indicators: {row['submission']}"
 
     # Compute ratios
-    ratios = {
-        "Equal opportunity ratio (TPR)": row["Equal opportunity ratio (TPR)"],
-        "Predictive parity ratio (Precision)": row["Predictive parity ratio (Precision)"],
-        "Predictive equality ratio (FPR)": row["Predictive equality ratio (FPR)"],
-        "Accuracy equality ratio (ACC)": row["Accuracy equality ratio (ACC)"],
-        "Statistical parity ratio (PPR)": row["Statistical parity ratio (PPR)"],
+    # ratios = {
+    #     "Equal opportunity ratio (TPR)": row["Equal opportunity ratio (TPR)"],
+    #     "Predictive parity ratio (Precision)": row["Predictive parity ratio (Precision)"],
+    #     "Predictive equality ratio (FPR)": row["Predictive equality ratio (FPR)"],
+    #     "Accuracy equality ratio (ACC)": row["Accuracy equality ratio (ACC)"],
+    #     "Statistical parity ratio (PPR)": row["Statistical parity ratio (PPR)"],
+    # }
+    rations = {
+        m:row[m]
+        for m in FAIRNESS_METRICS
     }
 
     fairness_df = pd.DataFrame(list(ratios.items()), columns=["metric", "ratio"])
