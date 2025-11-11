@@ -96,7 +96,7 @@ def plot_fairness_ratios(row, epsilon=0.8, title=None):
     #     "Accuracy equality ratio (ACC)": row["Accuracy equality ratio (ACC)"],
     #     "Statistical parity ratio (PPR)": row["Statistical parity ratio (PPR)"],
     # }
-    rations = {
+    ratios = {
         m:row[m]
         for m in FAIRNESS_METRICS
     }
