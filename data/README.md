@@ -84,7 +84,8 @@ Data from the [Living With Machines](https://livingwithmachines.ac.uk) programme
 
 - File(s): [`canon_challenge/dataset`](./canon_challenge/dataset)
 - Description:
-  - This dataset is based on the ANRChapitres Corpus: A corpus of 2031 copyright-free French-language novels published between the early XIXth to mid XXth century. It was devised as part of the [ANR Chapitres project](https://chapitres.hypotheses.org/presentation). Notably, this coprus was annotated with "canonicity" tags (whether the novel is considered part of the literary canon based on a posteriori, modern, considerations).
+  - This dataset is based on the ANRChapitres Corpus: A corpus of 2031 copyright-free French-language novels published between the early XIXth to mid XXth century. It was devised as part of the [ANR Chapitres project](https://chapitres.hypotheses.org/presentation). Notably, this coprus was annotated with "canonicity" tags.
+  - The `canon` tags are affixed at the author-level. They are based on academic interests in an author's work, and determined via the number of occuerences on [fabula.org](https://www.fabula.org), an academic literature research website (see [metadata discussion](https://chapitres.hypotheses.org/1297)).
   - The provided version is a sampled version of the original corpus, where text chunks are extracted from the book. The excerpts are five-sentence long segments extracted at the beginning of (at maximum) 10 random chapters of the books. It is further partitionned into train/validation/test splits. It is provided as an arrow-formatted dataset.
   - Columns: `author`, `author_gender`, `book_title`, `publication_year`, `text`, `label`
   - Note: Partition is made at the book level. The labels of the test set in [`canon_challenge/dataset`](./canon_challenge/dataset) are kept secret!
