@@ -57,6 +57,14 @@ def classification_metrics(y_true, y_pred, pos_label=0):
 # --------------------------- FAIRNESS ----------------------------
 # =================================================================
 
+FAIRNESS_METRICS = [
+    "Equal opportunity ratio (TPR)",
+    "Predictive parity ratio (PPV)",
+    "Predictive equality ratio (FPR)",
+    "Accuracy equality ratio (ACC)",
+    "Statistical parity ratio (PPR)",
+]
+
 def fairness_module(
     y_true,
     y_pred,
@@ -69,6 +77,7 @@ def fairness_module(
 ):
     """
     Computes fairness metrics (as dalex) and plots a dalex-like fairness check.
+    For more information, please refere to the dalex package: https://dalex.drwhy.ai.
 
     Parameters
     ----------
@@ -124,13 +133,25 @@ def fairness_module(
     acc_p = safe_div(tp_p + tn_p, tp_p + tn_p + fp_p + fn_p)
     pr_p  = safe_div(tp_p + fp_p, tp_p + tn_p + fp_p + fn_p)
 
-    ratios = {
-        "Equal opportunity ratio (TPR)": safe_div(tpr_u, tpr_p),
-        "Predictive parity ratio (Precision)": safe_div(ppv_u, ppv_p),
-        "Predictive equality ratio (FPR)": safe_div(fpr_u, fpr_p),
-        "Accuracy equality ratio (ACC)": safe_div(acc_u, acc_p),
-        "Statistical parity ratio (PPR)": safe_div(pr_u, pr_p),
-    }
+    ratios = {}
+    if "Equal opportunity ratio (TPR)" in FAIRNESS_METRICS:
+        ratios.update({"Equal opportunity ratio (TPR)": safe_div(tpr_u, tpr_p)})
+    if "Predictive parity ratio (PPV)" in FAIRNESS_METRICS:
+        ratios.update({"Predictive parity ratio (PPV)": safe_div(ppv_u, ppv_p)})
+    if "Predictive equality ratio (FPR)" in FAIRNESS_METRICS:
+        ratios.update({"Predictive equality ratio (FPR)": safe_div(fpr_u, fpr_p)})
+    if "Accuracy equality ratio (ACC)" in FAIRNESS_METRICS:
+        ratios.update({"Accuracy equality ratio (ACC)": safe_div(acc_u, acc_p)})
+    if "Statistical parity ratio (PPR)" in FAIRNESS_METRICS:
+        ratios.update({"Statistical parity ratio (PPR)": safe_div(pr_u, pr_p)})
+
+    # ratios = {
+    #     "Equal opportunity ratio (TPR)": safe_div(tpr_u, tpr_p),
+    #     "Predictive parity ratio (Precision)": safe_div(ppv_u, ppv_p),
+    #     "Predictive equality ratio (FPR)": safe_div(fpr_u, fpr_p),
+    #     "Accuracy equality ratio (ACC)": safe_div(acc_u, acc_p),
+    #     "Statistical parity ratio (PPR)": safe_div(pr_u, pr_p),
+    # }
 
     fairness_df = pd.DataFrame(list(ratios.items()), columns=["metric", "ratio"])
 

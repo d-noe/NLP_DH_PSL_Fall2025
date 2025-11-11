@@ -50,7 +50,7 @@ The code and notebooks for the tutorials and hands-on sessions are provided in t
 
 </details>
 
-## Week 3 (12/11): *Inferring Patterns: Supervised Tasks and Adaptation* <a name="week3"></a>
+## Week 3 (12/11): *Learning Patterns: Supervised Tasks and Adaptation* <a name="week3"></a>
 
 - Slides: [preview `html`](), [`pdf`](./slides/lecture_3.pdf)
 - Notebook(s): [BERT Fine-Tuning Tutorial](./code/3_supervised/Tutorial_3_SFT.ipynb), [Canonicity Prediction Challenge: Performance and Fairness](./code/3_supervised/Hands_on_3_CanonChallenge.ipynb)
