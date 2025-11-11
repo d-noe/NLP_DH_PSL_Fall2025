@@ -61,7 +61,7 @@ def plot_tradeoff_multi(df_beta):
 # ------------------------ FAIRNESS CHART -------------------------
 # =================================================================
 
-from metrics import FAIRNESS_METRICS
+from utils.metrics import FAIRNESS_METRICS
 
 def plot_fairness_ratios(row, epsilon=0.8, title=None):
     """
