@@ -59,7 +59,7 @@ true_df = load_true_labels()
 # =========================
 # MAIN APP
 # =========================
-st.title("📓 Canonicity Prediction Leaderboard")
+st.title("📓 Canonicity Prediction Shared Task")
 st.write("Upload your prediction CSV to see your scores!")
 
 if "submitted_files" not in st.session_state:
@@ -138,7 +138,7 @@ else:
 # =========================
 # ALWAYS SHOW LEADERBOARD
 # =========================
-st.subheader("🏆 Leaderboard")
+st.subheader("🧭 Indicators table")
 
 try:
     leaderboard = pd.read_csv(RESULTS_PATH)

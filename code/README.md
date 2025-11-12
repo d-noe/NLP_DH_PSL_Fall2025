@@ -71,7 +71,7 @@ The notebooks are provided in Google Colab. It provides a convenient way to run 
 ### Week 3 — 12.11 <a name="code_week3"></a>
 
 - [Tutorial_3_SFT.ipynb](./3_supervised/Tutorial_3_SFT.ipynb): Fine-tune a BERT-like model for literary genre classification based on 5-sentences long book chunks. Compare the results with classification performed by standard classifiers trained on document representations (BoW, TF-IDF, SentenceTransformers' embeddings).
-- [Hands_on_3_CanonChallenge.ipynb](./3_supervised/Hands_on_3_CanonChallenge.ipynb): Your time to devise a classifier for "canonicity" prediction based on 5-sentences long excerpts of French-language novels. Reflect about the data, the models, and the fairness implications of both. Implement you classifier and submit your predictions to the [*Performance & Fairness class leaderboard*](https://leaderboard-performance-fairness.streamlit.app): [https://tinyurl.com/canon-pf](https://tinyurl.com/canon-pf)!
+- [Hands_on_3_CanonChallenge.ipynb](./3_supervised/Hands_on_3_CanonChallenge.ipynb): Your time to devise a classifier for "canonicity" prediction based on 5-sentences long excerpts of French-language novels. Reflect about the data, the models, and the fairness implications of both. Implement you classifier and submit your predictions to the [*Performance & Fairness class shared task*](https://leaderboard-performance-fairness.streamlit.app): [https://tinyurl.com/canon-pf](https://tinyurl.com/canon-pf)!
 
 **Main libraries**: `transformers`, `pytorch`, `sklearn`
 
