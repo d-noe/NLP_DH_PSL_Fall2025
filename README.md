@@ -73,6 +73,8 @@ The code and notebooks for the tutorials and hands-on sessions are provided in t
 - [Interpretability Blog-post](https://blog.ml.cmu.edu/2020/08/31/6-interpretability/)
 - [(Olah et al., 2018)](10.23915/distill.00010): *The Building Blocks of Interpretability*: Mainly focusing (or applying) on computer vision, but a very nice and illustrated article on interpretability. 
 
+**Want more hands-on?** Check the [*To go further* section in code folder](./code/README.md#code_supp_3).
+
 </details>
 
 ## Week 4 (19/11):  *LLMs** (TBD) <a name="week4"></a>
@@ -83,6 +85,13 @@ The code and notebooks for the tutorials and hands-on sessions are provided in t
 
 <details><summary>To go further</summary>
 
+**LLMs**:
+- [(Cho et al., 2024)](https://poloclub.github.io/transformer-explainer/): Interactive visualisation, with explanations, of the inner working of causal language models. Very nice visualisation and summary of transformer-based LMs! 👀 If you like these visualisation, check also the [*LLM Visualization*](https://bbycroft.net/llm) by Brendan Bycroft.
+- [(Zhao et al., 2023)](https://arxiv.org/abs/2303.18223): *A Survey of Large Language Models*. — Comprehensive review of recent advances related to LLMs, background, key findings, mainstream techniques, etc.
+
+**LLMs, Biases and Fairness**
 - [(Gallegos et al., 2025)](https://direct.mit.edu/coli/article/50/3/1097/121961/Bias-and-Fairness-in-Large-Language-Models-A): *Bias and Fairness in Large Language Models: A Survey*
+
+**Want more hands-on?** Check the [*To go further* section in code folder](./code/README.md#code_supp_4).
 
 </details>
