@@ -100,7 +100,7 @@ Data from the [Living With Machines](https://livingwithmachines.ac.uk) programme
 
 No big data for this session! Only a `.json` formatted questionnaire is provided as an example (more for the format than for the content) for the hands-on evaluation session.
 
-- File(s): [`questionnaire/example_questionnaire.json`](./questionnaire/example_questionnaire.json)
+- File(s): [`questionnaires/example_questionnaire.json`](./questionnaires/example_questionnaire.json)
 - Description: 
   - MCQ complying with the `json` format used by the `Questionnaire` class used in the hands-on session
   - Fields:
