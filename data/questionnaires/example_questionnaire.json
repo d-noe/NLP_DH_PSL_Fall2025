@@ -1,0 +1,177 @@
+{
+    "categories": [
+        "Food habits"
+    ],
+    "min_labels": [
+        "🍃 Plant-based"
+    ],
+    "max_labels": [
+        "🍖 Carnist"
+    ],
+    "data": {
+        "id_0": {
+            "question": "If your meals were a landscape, which would they most resemble?",
+            "choices": [
+                "A wild meadow with flowers and seeds",
+                "A peaceful pasture with calm animals",
+                "A smoky hearth, where roasting and grilling dominate"
+            ],
+            "scores": [
+                [
+                    -1.0
+                ],
+                [
+                    0.1
+                ],
+                [
+                    1.0
+                ]
+            ]
+        },
+        "id_1": {
+            "question": "Your kitchen countertop is a canvas. What do you most often create there?",
+            "choices": [
+                "Contemporary art, delicate and colorfoul compositions and patchworks",
+                "Modern art, breaking free from the established narratives and re-interpreting them",
+                "Renaissance paintings, vibrant traditional painting filled with soul"
+            ],
+            "scores": [
+                [
+                    -0.8
+                ],
+                [
+                    0.0
+                ],
+                [
+                    0.8
+                ]
+            ]
+        },
+        "id_2": {
+            "question": "Imagine a symphony of tastes. Which section catches your ear first?",
+            "choices": [
+                "The gentle, fresh notes of leafy greens and herbs",
+                "A balanced melody, with both mellow and robust instruments",
+                "The deep, resonant chords of roasted and cured flavors"
+            ],
+            "scores": [
+                [
+                    -0.9
+                ],
+                [
+                    0.0
+                ],
+                [
+                    0.9
+                ]
+            ]
+        },
+        "id_3": {
+            "question": "When you walk through a market, what draws you in?",
+            "choices": [
+                "Farmers' vegetables and bright fruits",
+                "A mix of produce and local staples",
+                "The butcher's counter and cured delicacies"
+            ],
+            "scores": [
+                [
+                    -1.0
+                ],
+                [
+                    0.0
+                ],
+                [
+                    1.0
+                ]
+            ]
+        },
+        "id_4": {
+            "question": "If your favorite dish could tell a story, what would it be?",
+            "choices": [
+                "A story of growth, sunlight, and the rain that nourished it",
+                "A story blending old traditions with new flavors",
+                "A tale of fire, smoke, filled with danger and twists"
+            ],
+            "scores": [
+                [
+                    -0.7
+                ],
+                [
+                    0.0
+                ],
+                [
+                    0.7
+                ]
+            ]
+        },
+        "id_5": {
+            "question": "Which companion best reflects your dining style?",
+            "choices": [
+                "A wandering herbologist or gardener",
+                "A friend who appreciates balance and moderation",
+                "A passionate hunter or charcuterie enthusiast"
+            ],
+            "scores": [
+                [
+                    -0.8
+                ],
+                [
+                    0.0
+                ],
+                [
+                    0.8
+                ]
+            ]
+        },
+        "id_6": {
+            "question": "If your appetite were a season, which one would it be?",
+            "choices": [
+                "Spring — fresh, growing, ever-renewing",
+                "Summer — delicate, sun-drenched",
+                "Autumn — a balanced mix of bounty and comfort",
+                "Winter — rich, hearty, sustaining"
+            ],
+            "scores": [
+                [
+                    -0.2
+                ],
+                [
+                    -0.9
+                ],
+                [
+                    0.2
+                ],
+                [
+                    0.9
+                ]
+            ]
+        },
+        "id_7": {
+            "question": "If your had to go on a culinary trip, solely for the food, where would you go?",
+            "choices": [
+                "Taiwan",
+                "France",
+                "India",
+                "Italy",
+                "Chile"
+            ],
+            "scores": [
+                [
+                    -0.9
+                ],
+                [
+                    0.9
+                ],
+                [
+                    -0.75
+                ],
+                [
+                    0.75
+                ],
+                [
+                    0.0
+                ]
+            ]
+        }
+    }
+}

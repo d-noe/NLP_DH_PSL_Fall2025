@@ -13,7 +13,7 @@ This folder hosts the data used in the different tutorials and hands-on sessions
 - [Week 3](#data_week3)
   - Supervised Fine Tuning: [BooksChunks](#bookschunks)
   - Canonicity Prediction: [CanonChallenge](#canonchallenge)
-- [Week 4](#data_week4)
+- [Week 4](#data_week4): [Questionnaire](#questionnaire)
 
 The [`preprocessing`](./preprocessing/) folder contains pre-processing scripts used to obtain the presented data files. It is included for transparency and to allow reproduction, but was not developed for pedagogical purposes (-> the code is likely quick and dirty).
 
@@ -96,4 +96,19 @@ Data from the [Living With Machines](https://livingwithmachines.ac.uk) programme
 
 ## Week 4 — 19.11 <a name="data_week4"></a>
 
-TBD
+### Hands-on 4: *Machine Behavior* <a name="questionnaire"></a>
+
+No big data for this session! Only a `.json` formatted questionnaire is provided as an example (more for the format than for the content) for the hands-on evaluation session.
+
+- File(s): [`questionnaire/example_questionnaire.json`](./questionnaire/example_questionnaire.json)
+- Description: 
+  - MCQ complying with the `json` format used by the `Questionnaire` class used in the hands-on session
+  - Fields:
+    - `"categories"` (List[str]): names of the categories
+    - `"min_labels"` (List[str]): labels for low scores for each category
+    - `"max_labels"` (List[str]): labels for high scores for each category
+    - `"data"` (dict[str]): content of the questionnaire indexed by item IDs. Each item has:
+      - `"question"` (str): question (which will be included in the prompt template)
+      - `"choices"` (List[str]): list of possible responses (which will be included in the prompt template)
+      - `"scores"` (List[List]): scores associated with each `choice`. Score for an individual choice is a distribution over the categoires (e.g., a score entry `[0.5, 1, -0.2]`, if associated option is selected, would add +0.5 to the first category, +1 to the second one, and -0.2 to the third one).
+- Source: —
