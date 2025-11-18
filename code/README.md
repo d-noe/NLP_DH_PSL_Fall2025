@@ -87,7 +87,7 @@ The notebooks are provided in Google Colab. It provides a convenient way to run 
 ### Week 4 — 19.11 <a name="code_week4"></a>
 
 - [Tutorial_4_LLM_Interaction.ipynb](./4_causal/Tutorial_4_LLM_Interaction.ipynb): Learn how to use open-weight LLM via the `transformers` library, run and query LLMs locally with `ollama`, or interact with diverse providers through APIs and requests.
-- [Hands_on_4_EvalLLM.ipynb](./4_causal/Hands_on_4_EvalLLM.ipynb): 
+- [Hands_on_4_EvalLLM.ipynb](./4_causal/Hands_on_4_EvalLLM.ipynb): Write a multiple choice questionnaire and apply it to LLMs.
 
 **Main libraries**: `transformers`, `ollama`, `openai`, `requests`
 
