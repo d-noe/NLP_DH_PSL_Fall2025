@@ -77,7 +77,7 @@ The code and notebooks for the tutorials and hands-on sessions are provided in t
 
 </details>
 
-## Week 4 (19/11):  *LLMs** (TBD) <a name="week4"></a>
+## Week 4 (19/11):  *Large Language Models: Foundations, Generation & Beyond* <a name="week4"></a>
 
 - Slides: [preview `html`](https://rawcdn.githack.com/d-noe/NLP_DH_PSL_Fall2025/refs/heads/main/slides/lecture_4_self_contained.html), [`pdf`](./slides/lecture_4.pdf)
 - Notebook(s): [Tutorial_4_LLM_Interaction.ipynb](./code/4_causal/Tutorial_4_LLM_Interaction.ipynb); [Hands_on_4_EvalLLM.ipynb](./code/4_causal/Hands_on_4_EvalLLM.ipynb)
