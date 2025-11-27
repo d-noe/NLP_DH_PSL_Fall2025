@@ -1,6 +1,6 @@
 """
 Data files to be downloaded from:
-    https://bl.iro.bl.uk/concern/datasets/1a677294-cbd3-4bc0-b714-d3bbfd2a6da1
+    https://zenodo.org/records/7446728
 For this script, the files are to be stored in the folder:
     `data/data_dev/ANRChapitres-2000romans19e20e-ea770e4/`
 
@@ -27,7 +27,6 @@ from tqdm import tqdm
 # ============================================================
 # Dirty hard-coded variables
 
-#SEED = 109
 SEED = 0
 N_CHAPTERS = 10
 N_SENTENCES = 5
@@ -64,34 +63,30 @@ def parse_tei_file(filepath):
     f.close()
     root = ET.fromstring(xml_str)
 
-    # ---- Helper function for safe find ----
+    # Helper function for safe find
     def find_text(path):
         el = root.find(path)
         return el.text.strip() if el is not None and el.text else None
 
-    # ---- Extract author gender ----
+    # Extract author gender 
     author_el = root.find(".//author")
-    # author_name = author_el.get("name", "").strip() if author_el is not None else None
     author_gender = author_el.get("sex", "").strip() if author_el is not None else None
 
     ## extract author name directly from filename:
     author_name = filepath.split('/')[-1].split('_')[1].replace('-', ' ')
 
-    # ---- Extract publication date ----
-    # date_el = root.find(".//publicationStmt/date[@type='issued']")
-    # publication_date = date_el.get("when", "").strip() if date_el is not None else None
-    ## Extract date directly from filename:
+    #  Extract publication date 
     publication_date = int(filepath.split('/')[-1].split('_')[0])
 
-    # ---- Extract book title ----
+    # Extract book title 
     ## Extract directly from filename:
     book_title = filepath.split('/')[-1].split('_')[2][:-3].replace('-', ' ')
 
-    # ---- Extract 'canon' or 'non-canon' ----
+    # Extract 'canon' or 'non-canon'
     profile_el = root.find(".//editionStmt/profileDesc[@type='genre']")
     genre_tag = profile_el.get("tag", "").strip() if profile_el is not None else None
 
-    # ---- Extract chapters ----
+    # Extract chapters
     chapters = []
     for div in root.findall(".//div[@type='chapter']"):
         # Collect all <p> elements inside the chapter
@@ -171,7 +166,7 @@ def train_val_test_split_books(df, verbose=False):
     return df_with_splits
 
 def extract_text_chunks(df_splits, n_chapters=N_CHAPTERS, n_sentences=N_SENTENCES, verbose=False):
-    # Load a blank English model (no parser, tagger, etc.)
+    # Load a blank French model (no parser, tagger, etc.)
     nlp = spacy.blank("fr")
     # Add the simple rule-based sentencizer
     nlp.add_pipe("sentencizer")
